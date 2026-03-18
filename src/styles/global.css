@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Nunito", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --color-blush: #ffd6e8;
+  --color-lavender: #e8d5f5;
+  --color-mint: #d5f5e8;
+  --color-butter: #fff5d6;
+  --color-cream: #fdfaf6;
+  --color-deep: #1a0a2e;
+
+  --color-pink-100: #ffe0ee;
+  --color-pink-200: #ffc2dd;
+  --color-pink-300: #ff94c2;
+  --color-pink-400: #ff5fa3;
+  --color-pink-500: #ff3385;
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+::selection { background: #ffc2dd; color: #1a0a2e; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fdfaf6; }
+::-webkit-scrollbar-thumb { background: #ff94c2; border-radius: 999px; }

@@ -1,0 +1,75 @@
+---
+const VODs = [
+  { id: '2724978606' },
+  { id: '2722493059' },
+  { id: '2721546183' },
+];
+
+const clips = [
+  { id: 'SaltyBumblingAxePJSalt-DRdYqKvsyRdCkaRJ' },
+  { id: 'FlaccidVenomousLadiesStinkyCheese-bb_Okuh0E4gBxfhf' },
+  { id: 'SourRoughCookieUncleNox-2EOqaz6WWbsvqNbn' },
+];
+---
+
+<section id="directos" class="py-24 px-6 bg-cream">
+
+  <!-- Cabecera -->
+  <div class="max-w-6xl mx-auto mb-16 text-center">
+    <p class="text-pink-400 font-display font-bold text-sm tracking-[0.3em] uppercase mb-2">✦ mis directos ✦</p>
+    <h2 class="font-display font-black text-5xl text-deep mb-4">Últimos streams</h2>
+    <p class="text-deep/50 font-body text-lg">Revive los mejores momentos de Twitch 🎮</p>
+  </div>
+
+  <!-- Stream en directo -->
+  <div class="max-w-6xl mx-auto mb-16">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="w-3 h-3 rounded-full bg-red-500 animate-pulse inline-block"></span>
+      <h3 class="font-display font-bold text-xl text-deep">En directo ahora</h3>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-xl border-2 border-pink-200 aspect-video">
+      <iframe
+        src="https://player.twitch.tv/?channel=roisthecat&parent=localhost"
+        allowfullscreen
+        class="w-full h-full"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- VODs -->
+  <div class="max-w-6xl mx-auto mb-16">
+    <h3 class="font-display font-bold text-2xl text-deep mb-6">🎮 VODs recientes</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {VODs.map((vod) => (
+        <div class="rounded-2xl overflow-hidden shadow-md border border-pink-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="aspect-video">
+            <iframe
+              src={`https://player.twitch.tv/?video=${vod.id}&parent=localhost`}
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Clips -->
+  <div class="max-w-6xl mx-auto">
+    <h3 class="font-display font-bold text-2xl text-deep mb-6">✂️ Clips destacados</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {clips.map((clip) => (
+        <div class="rounded-2xl overflow-hidden shadow-md border border-pink-100 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="aspect-video">
+            <iframe
+              src={`https://clips.twitch.tv/embed?clip=${clip.id}&parent=localhost`}
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+</section>
