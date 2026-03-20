@@ -4,18 +4,19 @@
   --font-display: "Nunito", sans-serif;
   --font-body: "DM Sans", sans-serif;
 
-  --color-blush: #ffd6e8;
-  --color-lavender: #e8d5f5;
+  --color-blush: #e9d5ff;
+  --color-lavender: #ddd6fe;
   --color-mint: #d5f5e8;
   --color-butter: #fff5d6;
-  --color-cream: #fdfaf6;
-  --color-deep: #1a0a2e;
+  --color-cream: #faf5ff;
+  --color-deep: #1e0a3c;
 
-  --color-pink-100: #ffe0ee;
-  --color-pink-200: #ffc2dd;
-  --color-pink-300: #ff94c2;
-  --color-pink-400: #ff5fa3;
-  --color-pink-500: #ff3385;
+  --color-pink-50:  #faf5ff;
+  --color-pink-100: #f3e8ff;
+  --color-pink-200: #e9d5ff;
+  --color-pink-300: #d8b4fe;
+  --color-pink-400: #a855f7;
+  --color-pink-500: #7c3aed;
 
   --animate-float: float 5s ease-in-out infinite;
   --animate-fade-up: fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
@@ -41,8 +42,16 @@
 body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
-::selection { background: #ffc2dd; color: #1a0a2e; }
+::selection { background: #d8b4fe; color: #1e0a3c; }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #fdfaf6; }
-::-webkit-scrollbar-thumb { background: #ff94c2; border-radius: 999px; }
+::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 999px; }
+::-webkit-scrollbar-track { background: #faf5ff; }
+
+.btn-primary {
+  background-color: #a855f7;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
+}
+
+.btn-primary:hover { background-color: #7c3aed; }
+
+.tag:hover { background-color: #faf5ff; border-color: #c084fc; }
