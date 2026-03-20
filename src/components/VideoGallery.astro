@@ -12,7 +12,7 @@ const clips = await getLatestClips(userId, 6);
   <div class="max-w-6xl mx-auto mb-12 text-center">
     <p class="text-pink-400 font-display font-bold text-sm tracking-[0.3em] uppercase mb-2">✦ mis directos ✦</p>
     <h2 class="font-display font-black text-5xl text-deep mb-4">Últimos streams</h2>
-    <p class="text-deep/50 font-body text-lg">Revive los mejores momentos de Twitch 🎮</p>
+    <p class="text-muted font-body text-lg">Revive los mejores momentos de Twitch 🎮</p>
   </div>
 
   <!-- Stream en directo -->
@@ -65,7 +65,7 @@ const clips = await getLatestClips(userId, 6);
             </div>
             <div class="px-4 py-3">
               <p class="font-display font-bold text-deep text-sm truncate">{vod.title}</p>
-              <p class="font-body text-deep/40 text-xs mt-1">{new Date(vod.created_at).toLocaleDateString('es-ES')}</p>
+              <p class="font-body text-muted text-xs mt-1">{new Date(vod.created_at).toLocaleDateString('es-ES')}</p>
             </div>
           </div>
         ))}
@@ -86,7 +86,7 @@ const clips = await getLatestClips(userId, 6);
             </div>
             <div class="px-4 py-3">
               <p class="font-display font-bold text-deep text-sm truncate">{clip.title}</p>
-              <p class="font-body text-deep/40 text-xs mt-1">{new Date(clip.created_at).toLocaleDateString('es-ES')}</p>
+              <p class="font-body text-muted text-xs mt-1">{new Date(clip.created_at).toLocaleDateString('es-ES')}</p>
             </div>
           </div>
         ))}

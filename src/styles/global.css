@@ -10,12 +10,13 @@
   --color-butter: #fff5d6;
   --color-cream: #faf5ff;
   --color-deep: #1e0a3c;
+  --color-muted: #5b4a72;
 
   --color-pink-50:  #faf5ff;
   --color-pink-100: #f3e8ff;
   --color-pink-200: #e9d5ff;
   --color-pink-300: #d8b4fe;
-  --color-pink-400: #a855f7;
+  --color-pink-400: #9333ea;
   --color-pink-500: #7c3aed;
 
   --animate-float: float 5s ease-in-out infinite;
